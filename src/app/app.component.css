@@ -1,0 +1,57 @@
+* {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+header {
+  font-weight: normal;
+  padding: 30px;
+  background: #d7defd;
+  font-size: 40px;
+}
+
+.weather-info {
+  padding: 10px 50px;
+  background-color: #d7defd;
+  margin: 40px auto;
+  max-width: 400px;
+  border-radius: 20px;
+  line-height: 45px;
+}
+.weather-info .city-title {
+  font-size: large;
+}
+.weather-info .data-numbers {
+  font-size: 25px;
+}
+.weather-info .main-temp {
+  font-size: 35px;
+}
+
+.form-wrapper {
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.input-form input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  height: 30px;
+  max-width: 200px;
+  font-weight: normal;
+  padding-left: 10px;
+}
+.input-form button {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  padding: 7px 15px;
+  background-color: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+}
+.input-form button:hover {
+  background-color: #f3f3f3;
+}

@@ -1,1 +1,16 @@
-<button (click)='showWeather()'>Click</button>
+<header>Angular Weather App</header>
+<div class="wrapper">
+<div class="form-wrapper">
+  <div class="input-form"> 
+    <input type="text" placeholder="Enter the city" #city>
+    <button (click)='showWeather(city.value)'>Search</button>
+  </div>
+</div>
+
+<div class="weather-info" *ngIf="visible">
+  <h1>{{data?.name}}, <span class="city-title"> {{data?.sys.country}}</span> </h1>
+  <p> <span class="main-temp">{{data?.main.temp}}</span> </p>
+  <p> Feels like <span class="data-numbers">{{data?.main.feels_like}}</span> </p>
+  <p> Wind <span class="data-numbers">{{ data?.wind.speed }} mph</span> </p>
+</div>
+</div>
