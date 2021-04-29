@@ -24,6 +24,7 @@ export class AppComponent {
         if (data.main.feels_like > 0){
           data.main.feels_like = '+' + data.main.feels_like;
         }
+        console.log(this.data);
         this.visible = true;
 
       },
