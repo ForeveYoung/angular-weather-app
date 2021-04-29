@@ -6,7 +6,6 @@
     <button (click)='showWeather(city.value)'>Search</button>
   </form>
 </div>
-
 <div class="weather-info" *ngIf="visible">
   <h1>{{data?.name}}, <span class="city-title"> {{data?.sys.country}}</span> </h1>
   <p> <span class="main-temp">{{data?.main.temp}}</span> </p>
