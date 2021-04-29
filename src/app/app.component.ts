@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WeatherService } from './weather.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,14 @@ import { WeatherService } from './weather.service';
 export class AppComponent {
   data:any;
   error:any;
-  visible: boolean = false
+  visible: boolean = false;
+  inpForm:FormGroup = new FormGroup({
+    control:new FormControl('')
+  })
 
   constructor(private http:WeatherService) { }
   showWeather(city:any){
+    this.inpForm.reset();
     this.http.getData(city).subscribe(
       (data:any) => {
         this.data = data;
@@ -24,9 +29,7 @@ export class AppComponent {
         if (data.main.feels_like > 0){
           data.main.feels_like = '+' + data.main.feels_like;
         }
-        console.log(this.data);
         this.visible = true;
-
       },
       (error:any) => {
         this.error = error;
